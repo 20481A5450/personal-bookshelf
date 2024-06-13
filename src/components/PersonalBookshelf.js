@@ -12,21 +12,21 @@ useEffect(() => {
 
 return (
     <div className="container">
-    <h1>My Bookshelf</h1>
-    <Link to="/">
-        <button className="button-search">Back to Search</button>
-    </Link>
-    <br />
-    <div className="bookshelf">
-        {personalBookshelf.map((book) => (
-        <div className="book-card" key={book.key}>
-            <h3>{book.title}</h3>
-            <p>Edition Count: {book.edition_count}</p>
+        <h1>My Bookshelf</h1>
+        <Link to="/">
+            <button className="button-search">Back to Search</button>
+        </Link>
+        <br />
+        <div className="bookshelf">
+            {personalBookshelf.map((book) => (
+            <div className="book-card" key={book.key}>
+                <h3>{book.title}</h3>
+                <p>Edition Count: {book.edition_count}</p>
+            </div>
+            ))}
         </div>
-        ))}
-    </div>
-    </div>
-);
+        </div>
+    );
 }
 
 export default PersonalBookshelf;

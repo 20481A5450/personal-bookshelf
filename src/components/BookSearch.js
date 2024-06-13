@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './BookSearch.css'; 
 
+
 function BookSearch() {
 const [searchQuery, setSearchQuery] = useState('');
 const [searchResults, setSearchResults] = useState([]);
@@ -50,29 +51,29 @@ let searchTimeout;
 
 return (
     <div className="container">
-    <h1>Search by Book Name</h1>
-    <div className="search-input">
-        <input
-        type="text"
-        placeholder="Search for a book"
-        value={searchQuery}
-        onChange={handleSearch}
-        />
-    </div>
-    <Link to="/bookshelf">
-        <button className="button-bookshelf">My Bookshelf</button>
-    </Link>
-    <div className="search-results">
-        {searchResults.map((book) => (
-        <div className="card" key={book.key}>
-            <h3>{book.title}</h3>
-            <p>Edition Count: {book.edition_count}</p>
-            {!bookAdded[book.key] && ( 
-            <button onClick={() => handleAddToBookshelf(book)}>Add to Bookshelf</button>
-            )}
+        <h1>Search by Book Name</h1>
+        <div className="search-input">
+            <input
+            type="text"
+            placeholder="Search for a book"
+            value={searchQuery}
+            onChange={handleSearch}
+            />
         </div>
-        ))}
-    </div>
+        <Link to="/bookshelf">
+            <button className="button-bookshelf">My Bookshelf</button>
+        </Link>
+        <div className="search-results">
+            {searchResults.map((book) => (
+            <div className="card" key={book.key}>
+                <h3>{book.title}</h3>
+                <p>Edition Count: {book.edition_count}</p>
+                {!bookAdded[book.key] && ( 
+                <button onClick={() => handleAddToBookshelf(book)}>Add to Bookshelf</button>
+                )}
+            </div>
+            ))}
+        </div>
     </div>
 );
 }
