@@ -1,14 +1,13 @@
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: top;
     min-height: 100vh;
     background-color: #f0f0f0;
 }
 
 .heading {
-    font-family: poppins;
     text-align: center;
     margin-bottom: 20px;
 }
