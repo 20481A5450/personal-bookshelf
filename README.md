@@ -1,6 +1,6 @@
 # Personal Bookshelf
-
 A personal bookshelf application developed using ReactJs and Open Library API.
+
 
 ## Installation
 
@@ -25,3 +25,4 @@ A personal bookshelf application developed using ReactJs and Open Library API.
     ```
 
 5. Open your browser and visit `http://localhost:3000` to view the application.
+
